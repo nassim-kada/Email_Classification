@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Email Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Spam Email Classifier</h1>
+            <div class="description">Analyze email content to detect spam using machine learning</div>
+        </header>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="email-content">Enter email content to classify:</label>
+                <textarea id="email-content" placeholder="Paste email content here..."></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button class="classify-btn" id="classify-btn">Classify Email</button>
+                <button class="clear-btn" id="clear-btn">Clear</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div>Analyzing email content...</div>
+        </div>
+        
+        <div class="result-section" id="result-section">
+            <div class="result-box" id="result-box"></div>
+            
+            <div class="confidence-container">
+                <div class="confidence">
+                    <div class="confidence-bar spam-confidence" id="spam-confidence"></div>
+                    <div class="confidence-bar ham-confidence" id="ham-confidence"></div>
+                </div>
+                <div class="confidence-labels">
+                    <span>Spam probability: <span id="spam-percent">0</span>%</span>
+                    <span>Ham probability: <span id="ham-percent">0</span>%</span>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <div class="features-heading">Key features detected:</div>
+                <div class="feature-list" id="feature-list">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
