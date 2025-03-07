@@ -10,11 +10,9 @@ document.getElementById("classify-btn").addEventListener("click", async function
     document.getElementById("result-section").style.display = "none";
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/classify", {
+        const response = await fetch("https://email-classification-7m9y.onrender.com/classify", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email_content: emailContent })
         });
 
